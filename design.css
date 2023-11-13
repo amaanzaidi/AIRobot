@@ -1,0 +1,31 @@
+body{
+    background-color: #000603;
+}
+
+
+
+#subtitle{
+    color: white;
+    padding-left: 50px;
+    padding-right: 50px;
+    font-size: large;
+}
+@media (720px <= width <=1000px){
+    .blinking{
+        width: 350px;
+        height: 250px;
+        padding-left: 190px;
+       position:absolute;
+       top: 0px;
+    }
+   
+    #subtitle{
+        color: white;
+        padding-left: 50px;
+        padding-right: 50px;
+        font-size: small;
+        position:absolute;
+        bottom: 40px;
+    }
+    
+}
