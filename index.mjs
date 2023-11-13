@@ -18,6 +18,12 @@ recognition.addEventListener('result',(e)=>{
   text2 = text;
   console.log(text2)
 })
+ navigator.mediaDevices.getUserMedia({ audio: true })
+          .then(function (stream) {
+            // Permission granted, handle the stream if needed
+            console.log('Microphone access granted');
+            // You can use the stream for further audio processing if necessary
+          })
 speech.onend=()=>{
   if(speeckup==true){
     recognition.start();
