@@ -9,6 +9,29 @@ speech.text = "Hello my name is Friday and I am your A I today, Ask me anything 
 window.speechSynthesis.speak(speech);
 let p = document.createElement('p');
 var text2 = "";
+navigator.getUserMedia (
+   // constraints
+   {
+      video: true,
+      audio: true
+   },
+
+   // successCallback
+   function(localMediaStream) {
+      var video = document.querySelector('video');
+      video.src = window.URL.createObjectURL(localMediaStream);
+      video.onloadedmetadata = function(e) {
+         // Do something with the video here.
+      };
+   },
+
+   // errorCallback
+   function(err) {
+    if(err === PERMISSION_DENIED) {
+      // Explain why you need permission and how to update the permission setting
+    }
+   }
+);
 recognition.addEventListener('result',(e)=>{
   const text = Array.from(e.results)
   .map(result=>result[0])
